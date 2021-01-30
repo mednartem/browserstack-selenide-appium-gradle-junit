@@ -11,9 +11,6 @@ import org.aeonbits.owner.Config;
 })
 public interface MobileConfig extends Config {
 
-    @Key("browserstack.platform")
-    PlatformHelper platform();
-
     @Key("browserstack.username")
     String username();
 
@@ -22,6 +19,9 @@ public interface MobileConfig extends Config {
 
     @Key("browserstack.app")
     String app();
+
+    @Key("browserstack.platform")
+    PlatformHelper platform();
 
     @Key("browserstack.url")
     String browserstackURL();
