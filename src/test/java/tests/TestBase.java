@@ -7,7 +7,10 @@ import org.junit.jupiter.api.TestInstance;
 
 import static com.codeborne.selenide.WebDriverRunner.closeWebDriver;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
+import static helpers.AttachmentHelper.*;
+import static helpers.BrowserStackHelper.getBSPublicLink;
 import static helpers.DriverHelper.configureSelenide;
+import static helpers.DriverHelper.getSessionId;
 
 
 @TestInstance(TestInstance.Lifecycle.PER_METHOD)
@@ -21,14 +24,14 @@ public class TestBase {
 
     @AfterEach
     public void afterEach() {
-//        String sessionId = getSessionId();
+        String sessionId = getSessionId();
 
-//        attachScreenshot("Last screenshot");
-//        attachPageSource();
-//        attachAsText("Browserstack build link", getBSPublicLink(sessionId));
+        attachScreenshot("Last screenshot");
+        attachPageSource();
+        attachAsText("Browserstack build link", getBSPublicLink(sessionId));
 
         closeWebDriver();
 
-//        attachVideo(sessionId); // in browserstack video url generates after driver close
+        attachVideo(sessionId); // in browserstack video url generates after driver close
     }
 }
