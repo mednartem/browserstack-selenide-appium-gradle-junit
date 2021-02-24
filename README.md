@@ -1,4 +1,4 @@
-Selenium autotests for GitHub with use Allure
+Mobile tests with use browserstack
 
 ### Dependencies:
 
@@ -12,7 +12,7 @@ Selenium autotests for GitHub with use Allure
 * Allure-selenide 2.13.6
 * Allure plugin 2.8.1
 
-For run tests need to pass credentials with System.properties or add file with these to resources
+For run tests need to pass credentials with System.properties or update file remote.properties
 > browserstack.username=
 > 
 > browserstack.password=
